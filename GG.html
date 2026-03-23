@@ -233,8 +233,10 @@
 
     <script>
         // --- Sound Manager ---
-        function playSound(src) {
-            const sound = new Audio(src);
+        const GITHUB_RAW_URL = "https://raw.githubusercontent.com/SandwichDeli/Test-2/main/";
+
+        function playSound(filename) {
+            const sound = new Audio(GITHUB_RAW_URL + filename);
             sound.play().catch(e => console.warn('Audio playback prevented by browser:', e));
         }
 
